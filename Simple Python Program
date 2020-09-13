@@ -1,0 +1,16 @@
+This is a simple print statement
+
+>>> print ('this is a test message')
+this is a test message
+
+Here,we are seeing how to append 2 print statements
+
+>>> print ('this is a test message' + 'ok ok, another message')
+this is a test message ok, another message
+
+Here we are seeing how we are using a separator
+
+>>> print ('this is a test message',
+	   'ok ok, another message',sep='\n')
+this is a test message
+ok ok, another message
