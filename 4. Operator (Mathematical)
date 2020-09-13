@@ -1,0 +1,70 @@
+PY supports +, -, *, /, **, //    ::: FOLLOWS PEMDAS (PARENTHESES, EXPONENTS, MULTIPLICATION AND DIVISION (FROM LEFT TO RIGHT), ADDITION AND SUBTRACTION (FROM LEFT TO RIGHT).
+) rule
+
+10/3 :: GIVES DECIMAL REMINDER TOO ==> 3.3333333333333335
+
+10//3 ==> 3
+
+3*3 ==> 9
+
+4**6 ==> 4096, i.e: 4*4*4*4*4*4
+
+
+RELATIONAL OPERATORS ::: True is 1, false is 0
+THE FOLLOWING ARE VARIOUS RELATIONAL OPERATORS GREATER THAN >, GREATER THAN OR EQUAL TO >=, EQUAL TO ==, NOT EQUAL TO !=, LESS THAN < , LESS THAN OR EQUAL TO <=
+
+THESE ALWAYS RETURNS "TRUE" OR "FALSE"
+
+>>> True + True
+2
+
+>>> True - True
+0
+
+>>> True * True
+1
+
+>>> True - False
+1
+
+>>> False - True
+-1
+
+>>> True/False
+ERROR
+
+
+
+
+
+ORDINAL AND CARDINAL NUMBERS: HERE WE CONVERT ALPHABET TO ITS NUMBER OR VICEVERSA
+ord('d')  ==> 100; ord('a') ==> 97 ;;; chr(97)==> 'a' ;chr(120) ==> 'x'
+
+
+
+
+LOGICAL OPERATORS ::: AND, OR, NOT ::: 2ND EXPRESSION EXECUTES ONLY WHEN FIRST IS TRUE
+
+EMPTY String is False,, zero is False
+
+>>> '' or 'ty' :: HERE, THERE IS NO SPACE, ITS EMPTY, SO O/P IS 'TY'. IF THERE IS A SPACE, LIKE ' ' OR 'TY', O/P IS ' '
+
+
+None – is a special object which is considered as false when it is used in conditions
+
+
+>>> False==None ==> False
+
+>>> False!=None ==> True
+
+>>> True!=None ==> False
+
+>>> not True   ==> False
+
+>>> not False   ==> True 
+
+>>> not 1  ==> False
+
+>>> not 0  ==> True
+
+>>> not not True ==> True
