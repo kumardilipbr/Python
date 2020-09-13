@@ -1,0 +1,57 @@
+THIS IS A SIMPLE PRINT STATEMENT
+
+>>> print ('this is a test message')
+this is a test message
+
+
+
+
+HERE,WE ARE SEEING HOW TO APPEND 2 PRINT STATEMENTS
+
+>>> print ('this is a test message' + 'ok ok, another message')
+this is a test message ok, another message
+
+
+
+HERE WE ARE SEEING HOW WE ARE USING A SEPARATOR
+
+>>> print ('this is a test message',
+	   'ok ok, another message',sep='\n')
+this is a test message
+ok ok, another message
+
+
+
+
+HERE, WE SEE HOW TO REPEAT THE SAME VALUES USING PRINT
+aname=Kumar
+lname=Dilip
+print(3*aname) ==> kumarkumarkumar
+
+IT PRINTS THE VALUE OF aname 3 TIMES
+
+print(2*aname + 2*lname) ==> kumarkumardilipdilip"
+HERE, WE SEE THAT THE PRINT OUTPUTS Kumar 2 TIMES, BACK TO BACK, FOLLOWED BY dilip 2 TIMES. AS WE HAVE NOT USED SPACES, IT JUST WRITES BACK TO BACK
+
+print(2*aname + " " + 2*lname) ==> kumarkumar  dilipdilip"
+HERE WE CAN SEE THAT THE OUTPUTIS SEPERATED BY 2 SPACES
+
+
+
+
+NOW, LET US SEE HOW TO RE-USE THESE VARIABLES 
+a=kumar
+b=30
+print ('name is '+ a + ', ' + 'age is ' + str(b))
+name is kumar, age is 30
+HERE SEE THE OUTPUT COMES WITH ALL THE NEEDED INPUT. THE SAME CAN BE DONE USING INPUT VARIABLES WHERE WE ASK USE FOR DATA AND OUTPUT THE SAME
+
+Name=input("Enter Your Name! ")
+Age=input("Enter Your age! ")
+print ("Your Name is " + Name + " and Age entered is: " + str(Age))
+
+WHEN WE COMPILE, IT ASKS FOR NAME, ENTER A NAME, SAY KUMAR. IT ALSO ASKS FOR AGE, ENTER AN AGE, SAY 30.
+output will be as below
+
+Your Name is KUMAR and Age entered is: 30
+HERE YOU MIGHT HAVE OBSERVED I HAVE TYPECASTED AGE WITH Str, BECAUSE, AGE IS A NUMBER AND REMAINING IS STRING. HENCE, WE NEED TO TYPECAST IT TO STRING. ELSE WE GET ERROR
