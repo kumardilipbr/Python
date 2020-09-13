@@ -1,0 +1,50 @@
+HERE, WE WILL SEE HOW TO DO SOME STRING RELATED OPERATIONS
+
+qname="This is my First Message"
+print(qname.upper()) ==> CONVERTS EVERYTHING TO UPPER CASE
+==> THIS IS MY FIRST MESSAGE
+
+qname.lower() ==> CONVERTS EVERYTHING TO LOWER CASE
+this is my first message
+
+qname[1].upper() ==> OUTPUTS ONLY THE 1ST INDEX VALUE IN UPPER
+==> H
+
+qname[1:8].upper() ==> OUTPUTS THE VALUE FROM 1ST INDEX TO 8TH IN UPPER CASE
+==> HIS IS 
+
+qname[2:].upper() ==> THIS OUTPUTS THE VALUES FROM 2nd INDEX ONWARDS TILL THE END
+IS IS MY FIRST MESSAGE
+
+qname[:9].upper() ==> THIS GIVES THE OUTPUT FROM BEGINNING TILL 9TH INDEX
+THIS IS M
+
+qname.isalpha() ==> CHECKS IF ITS ALPHA OR NOT. PRINTS TRUE OR FALSE.
+
+qname.isdigit() ==> CHECKS IF ITS DIGIT OR NOT. PRINTS TRUE OR FALSE.
+
+qname.startswith('g') ==> CHECKS IF IT BEGINS WITH G OR NOT
+
+qname.endswith('l') ==> CHECKS IF IT ENDS WITH L OR NOT
+
+qname.startswith('P') and qname.endswith('G') ==> CHECKS IF IT BEGINS WITH "P" AND ENDS WITH G OR NOT
+
+qname.startswith('P') or qname.endswith('g') ==> CHECKS IF IT BEGINS WITH "p" OR ENDS WITH "g" OR NOT
+
+qname.strip() :: REMOVES LEADING AND TRAILING EMPTY SPACES
+
+qname.lstrip() :: REMOVES SPACE IN LEFT SIDE
+
+qname.rstrip() :: REMOVES SPACE IN RIGHT SIDE.
+
+qname.ljust(45) ==> 'This is a Test                               ' ==> STARTS WRITING FROM LEFT SIDE AND GIVES SPACE FOR 45 CHAR
+
+qname.rjust(23) ==> '         This is a Test' ==> GIVES 23 CHAR SPACE AND PUSHES ALL CHAR TO RIGHT END
+
+qname.rjust(22,'#') ==> '########This is a Test' ==> PUTS THE CHAR # HERE, IN THE EMPTY SPACES
+
+qname.split() ==> ['This', 'is', 'a', 'Test'] ==> SPLITS ALL THE DETAILS IN THAT VARIABLE AND COMMA SEPARATES THEM
+
+qname.split('ok') ==> THIS SPLITS WHERE THIS STRING MATCHES, I.E OK. OK IS THE DELIMITER HERE
+
+w='ok this is it' ==>  '%%'.join(w) ==> 'o%%k%% %%t%%h%%i%%s%% %%i%%s%% %%i%%t'
