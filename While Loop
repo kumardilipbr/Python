@@ -1,0 +1,55 @@
+WHILE LOOP IS EXECUTED IF THE CONDITION IS TRUE
+
+count=0   # NEED INITIATION OF VARIABLE AND VALUE ASSIGNMENT TOO HERE
+
+while count<=10:
+    print('going up' + str(count))    # NEED INDENTATION HERE. STR IS MANDATORY HERE, IF WE ARE USING ANY STRING LIKE 'GOING UP'. WE CAN ONLY USE PRINT(COUNT) TO ONLY PRINT NUMBERS
+    count=count+1        # INDENTATION IS NEEDED HERE SAME AS PRINT LINE ABOVE , WE CAN USE COUNT + AS WELL. THIS CAN ALSO BE WRITTEN AS COUNT+=1
+print ('done with printing')   :: PRINTS FROM 0 TO 10
+
+OUTPUT
+going up0
+going up1
+going up2
+going up3
+going up4
+going up5
+going up6
+going up7
+going up8
+going up9
+going up10
+done with printing
+
+
+
+count=3
+while count>=-5:
+print('goin up:   ' + str(count))
+count=count-1   # PRINTS FROM 3 TO -5. WE CAN ALSO DO THIS BY TAKING THE COUNT VALUE AS 100 AND IN WHILE STMT USE COUNT >=90, COUNT=COUNT-1, TO GET 100 TO 90
+
+
+
+# IF WE WANT TO PRINT ALTERNATE NUMBER, THEN WE NEED TO USE COUNT=COUNT+2. IF NEED TO JUMP 3 NUMBERS, USE COUNT=COUNT+3
+# WE NEED NOT USE THE WORD COUNT ONLY. HERE, WE CAN USE A=2 WHILE A<=10: PRINT('STR(A)') A+=1
+
+IN THE WHILE LOOP, THERE ARE 2 IMPORTANT THINGS, "CONTINUE" AND "BREAK"
+CONTINUE HELPS TO LOOP IN AGAIN AND AGAIN AS LONG AS THE VALUE IS TRUE
+BREAK HELPS TO COME OUT OF THE LOOP AS SOON AS IT TURNS TO BE TRUE
+
+while True:
+  name=input('Enter a name:\n')
+name1='Admin'
+if name.casefold()!=name1.casefold():  # THIS IS TO IGNORE CASE OF VALUE ENTERED
+     print('Wrong user, type username again')   # THE PRINT STMT AND CONTINUE OF NEXT LINE ARE INDENTED SIMILARLY
+        continue      # AN INDENTATION IS NEEDED. HERE, THE CONTINUE MAKE SURE THE USER NAME ENTERED IS EQUAL TO TEST ONLY
+    print('Greeting the user: ',name)
+    print(', Now enter your password, its a fish type... hint')
+    password=input('enter password: \n')
+    if password == 'bluefish':     # a : IS NEEDED
+        print('Correct Login!!!\n\n')    # THE PRINT STMT AND BREAK OF NEXT LINE ARE INDENTED SIMILARLY
+        break          # AN INDENTATION IS NEEDED. IF WE USE CONTINUE, IT WILL NEVER END LOOP OF ENTER NAME, IN VALIDATION AND IF IT MATCHES ENTER PASSWORD, AND LOOP BACK TO ENTER NAME
+
+    print('access not granted to user, Try again\n\n\n')    # THE PRINT STMT ARE INDENTED SAME AS IF STMT ABOVE
+
+
