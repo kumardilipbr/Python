@@ -1,0 +1,81 @@
+HERE, WE ARE GOING TO LOOK INTO ONE OF THE LOOPING CONCEPTS TO DO A TASK REPETETIVELY.
+iF LOOPS ARE USED WHERE WE WANT TO VALIDATE A CONDITION AND MAKE SURE THE CONDITION
+IN THE LOOPS, INDENTATION IS VERY IMPORTANT. A 4 SPACE INDEDTATION TO THE CONDITION IS MANDATORY AS PER "PEP 8" STANDARD
+
+if True:
+  print("This is True condition") ==> IF THIS CONDITION TURNS TRUE, THEN THE PRINT STATEMENT IS EXECUTED
+  
+  
+num=int(input('enter a num'))
+if num==0:
+	    print('its zero')
+
+HERE, IT ASKS FOR AN INPUT. SAY, WE ENTER A NUMBER. IF THE NUMBER IS EQUAL TO ZERO, IT PRINTS "its zero"
+HERE, IT IS IMPORTANT TO UNDERSTAND THAT WE NEED TO USE == FOR ASSIGNMENT AND NOT JUST A SINGLE =
+
+THE IF LOOPS ONLY VALIDATES THE CONDITION TO BE TRUE
+
+num=input("enter a number")
+if num==0 or num==1:
+  print("number is either zero or one")
+
+AS WE EXECUTE THIS SCRIPT, WE ARE ASKED TO ENTER A NUMBER AND IF OUR ENTERED NUMBER IS EITHER ZERO OR ONE, WE GET THE OUTPUT AS "number is either zero or one"
+IF THE ENTERED NUMBER IS ANYTHIN OTHER THAN THIS, OUTPUT IS BLANK
+
+
+ELSE LOOP
+
+num=int(input("enter a number "))
+if (num==0 or num==1):
+    print('its zero OR ONE')
+else:
+    print("this is good")
+    
+ HERE, IF THE ENTERED NUMBER IS EITHER 0 OR 1, IT WILL OUTPUT "its zero OR ONE", ANYTHING OTHER THAN THAT WILL PRINT "this is good"
+ WHAT IF WE ENTER ANYTHING OTHER THAN NUMBERS, LIKE DIGITS OR SPECIAL CHARACTERS? WELL, IT THROWS AN ERROR, BECAUSE WE ARE ASKING TO INPUT AN INTEGER TYPE, NOT A STRING TYPE.
+ 
+ WE CAN ALSO USE MULTIPLE IF STATEMENT
+ BUT, WE NEED TO USE AN ELSE TOGETHER WITH IT, ELSE, IT WILL ONLY CONSIDER THE ELSE STATEMENT OF THE NEXT AVAILABLE ONE AND EVALUATE IT
+ 
+ num=int(input("enter a number "))
+if (num==0 or num==1):
+    print('its zero OR ONE')
+if num==10:
+    print("Entered number is ten")
+else:
+    print("this is good")
+    
+HERE, THE OUTPUT WILL BE VALIDATED AGAINST 0 OR 1 AND IF ITS CORRECT, IT WILL OUTPUT "it zero OR ONE" AS WELL AS "this is good", BECAUSE THE FIRST IF STATEMENT DOESNT HAVE AN ELSE TO VALIDATE AGAINST.
+IF WE ENTER THE NUMBER 10, WE GET OUTPUT AS "Entered number is ten"
+
+SOME MORE EXAMPLES
+
+fn=input('enter a file name')
+if fn.startswith('p') or fn.startswith('P'):
+    print ('FN starts with p or P')
+if fn.isalpha():
+    print('has alphabets only')
+else:
+    print('has char as wel')
+if 'python' in fn:
+    print('python present inside filename')
+else:
+    print('Name Python not present in filename')
+print('closing statement')
+
+
+IF-ELIF-ELSE condition
+
+num=int(input('enter a num'))
+print('before loop')
+if num<0:
+	    print('its negative num')
+elif num==0:
+	    print('non zero')
+elif num >0 and num <=10:
+            print('bn zero and ten')
+else:
+            print('more than ten')
+
+HERE, WE ARE USING ALL THE THREE CONDITION, IF, ELSE, ELIF
+IF WE ENTER NUMBER 5, ITS CHECKED IF ITS  LESS THAN ZERO OR EQUAL TO ZERO OR GREATER THAN ZERO AND ACCORDINGLY OUTPUT THE STATEMENT
