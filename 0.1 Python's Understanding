@@ -1,0 +1,77 @@
+Understanding Variables in Python
+
+Python Expression Operators
+
+Variables and Basic Expressions
+  1. Variables are created when they are first assigned values.
+  2. Variables are replaced with their values when used in expressions.
+  3. Variables must be assigned before they can be used in expressions.
+  4. Variables refer to objects and are never declared ahead of time.
+  
+Variable names can contain only letters, numbers, and underscores.
+They can start with a letter or an underscore, but not with a number.
+For instance, you can call a variable message_1 but not 1_message.
+Spaces are not allowed in variable names, but underscores can be used to separate words in variable names.
+For example, greeting_message works, but greeting message will cause errors.
+
+Avoid using Python keywords and function names as variable names;
+that is, do not use words that Python has reserved for a particular programmatic purpose, such as the word print. 
+
+Variable names should be short but descriptive.
+Example, name is better than n, student_name is better than s_n, and name_length is better than length_of_persons_name.
+
+Be careful when using the lowercase letter l and the uppercase letter O because they could be confused with the numbers 1 and 0.
+
+
+Strings
+
+Common string literals and operations
+
+
+String Literals
+
+> Single- and Double-Quoted Strings Are the Same
+> Escape Sequences Represent Special Bytes
+> Raw Strings Suppress Escapes
+> Triple Quotes Code Multiline Block Strings
+
+Avoiding Syntax Errors with Strings
+
+message = "One of Python's strengths is its diverse community."
+message1 = 'One of Python's strengths is its diverse community.'
+message2 = '''One of Python's 
+              strengths is its 
+              diverse community.'''
+
+
+
+Strings in Action
+
+first_name = "Pete"
+last_name = "Sampras"
+
+full_name = first_name + " " + last_name
+print(full_name)
+
+==> Pete Sampras
+
+
+Adding Whitespace to Strings with Tabs or Newlines
+
+In programming, whitespace refers to any nonprinting character, such as spaces, tabs, and end-of-line symbols.
+You can use whitespace to organize your output so it’s easier for users to read.
+
+print("Languages:\nPython\nC\nJavaScript")
+==> Languages:
+Python
+C
+JavaScript
+
+
+TO IGNORE THE SPECIAL CHARACTER, WE NEED TO USE A \. TO NEGATE THE EFFECT OF \ WE CAN USE r IN THE BEGINNING OF THE SENTENCE
+
+print('That is Carol\'s cat.')
+print(r'That is Carol\'s dog.')
+==>
+That is Carol's cat.
+That is Carol\'s dog.
