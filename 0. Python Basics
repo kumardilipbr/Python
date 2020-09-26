@@ -1,0 +1,61 @@
+1. Software quality
+    Python code is designed to be readable, and hence reusable and maintainable—much more so than traditional scripting languages.
+
+2. Developer productivity
+    Less to type,less to debug, and less to maintain.
+
+3. Program portability
+    Most Python programs run unchanged on all major computer platforms. 
+
+4. Support libraries
+    Library supports an array of application-level pro-gramming tasks, from text pattern matching to network scripting.
+    Python’s third-party domain offers tools for website construction, numeric programming, serial port access, game development, and much more.
+    
+5. Component integration
+    Python scripts can easily communicate with other parts of an application, using a variety of integration mechanisms.
+
+Who Uses Python Today?
+    Google, YouTube video sharing service, 	BitTorrent peer-to-peer file sharing system, Intel, Cisco, Hewlett-Packard, Seagate, Qualcomm, and IBM use Python for hard-
+ware testing. NASA, Los Alamos, Fermilab, JPL, and others use Python for scientific programming tasks. The One Laptop Per Child (OLPC) project builds its user interface and activity
+model in Python.
+
+
+What Can I Do with Python?
+
+While there are many things that are done today with Python, some of the things for which Python is used are as below:
+Systems Programming
+Internet Scripting
+Numeric and Scientific Programming
+Gaming, Images, Serial Ports, XML, Robots, and More
+
+
+***** Python’s Technical Strengths ***** 
+
+It’s Object-Oriented
+It’s Free
+It’s Portable
+It’s Powerful
+Dynamic typing
+Automatic memory management
+Programming-in-the-large support
+Built-in object types
+Built-in tools
+Library utilities
+Third-party utilities
+Easy to use and learn
+
+
+*******  Introducing the Python Interpreter *************
+
+An interpreter is a kind of program that executes other programs. When you write a Python program, the Python interpreter reads your program and carries out the instructions it contains.
+In effect, the interpreter is a layer of software logic between your code and the computer hardware on your machine.
+
+
+The Python Virtual Machine (PVM)
+    Once your program has been compiled to byte code (or the byte code has been loaded from existing .pyc files), it is shipped off for execution to something generally known as the Python Virtual Machine .
+    The PVM is the run-time engine of Python; it’s always present as part of the Python system, and it’s the component that truly runs your scripts. 
+    
+***** Python’s traditional runtime execution model: 
+
+Source code you type is translated to byte code, which is then run by the Python Virtual Machine. 
+Your code is automatically compiled, but then it is interpreted.    
