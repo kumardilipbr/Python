@@ -1,0 +1,238 @@
+Lists
+
+A list is a collection of items in a particular order.
+
+Ordered collections of arbitrary objects Accessed by offset Variable-length, heterogeneous, and arbitrarily nestable Of the category “mutable sequence”
+
+
+bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles)
+
+==> ['trek', 'cannondale', 'redline', 'specialized']
+
+
+Basic List Operations
+
+Accessing Elements in a List
+
+print(bicycles[0])
+print(bicycles[0].title())
+
+==> trek        # HERE, IT PRINTS THE 0th ELEMENT OF THE LIST, WHICH IS TREK
+Trek            # HERE, THE title() CONVERTS THE 1ST LETTER TO CAPS AND REST IN LOWER CASE
+
+
+Indexes can be only integer values, not floats. 
+
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles[2])
+print(motorcycles[-1])
+
+==> THE OUTPUT IS suzuki FOR BOTH
+
+
+Finding the Length of a List:
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(len(cars))
+
+==> 4
+
+
+
+List Concatenation and List Replication
+
+
+The + operator can combine two lists to create a new list value in the same
+way it combines two strings into a new string value.
+
+[1, 2, 3] + ['A', 'B', 'C']
+['X', 'Y', 'Z'] * 3
+
+cars=['bmw', 'audi', 'toyota', 'subaru']
+CARS=['FERRARRI',"LAMBO"]
+print(cars + CARS)
+
+==> ['bmw', 'audi', 'toyota', 'subaru', 'FERRARRI', 'LAMBO']
+
+
+
+cars=['bmw', 'audi', 'toyota', 'subaru']
+print(cars *2)
+
+==> ['bmw', 'audi', 'toyota', 'subaru', 'bmw', 'audi', 'toyota', 'subaru']
+
+
+
+Indexing, Slicing, and Matrixes
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
+
+print(players[1:4])
+print(players[2:])
+print(players[-3:])
+
+==> ['charles', 'martina', 'michael']
+['martina', 'michael', 'florence']
+['michael', 'florence', 'eli']
+['michael', 'florence', 'eli']
+
+
+
+Looping Through a Slice
+
+
+players = ['charles', 'MARTINA', 'michael', 'florence', 'eli']
+
+print("Here are the first three players on my team:")
+
+for player in players[:3]:
+  print(player.title())
+
+==> Here are the first three players on my team: # HERE, IT PRINTS ALL THE VALUES UPTO 3RD INDEX (EXCLUDING IT) AND MAKES THE 1ST CHARACTER AS CAPS
+Charles
+Martina
+Michael
+
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+
+print("Here are the first three players on my team:")
+
+for player in players[:5:2]:
+  print(player.title())
+
+==> Here are the first three players on my team: # HERE, IT PRINTS ALL THE VALUES OF THE LIST, BUT WITH A SKIP OF 2 i.e ALTERNATIVE
+Charles
+Michael
+Eli
+
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+
+print("Here are the first three players on my team:")
+
+for player in players[:]:   # THIS PRINTS ALL THE VALUES. IF WE DO NOT GIVE ANYTHING INSIDE THE [], THEN IT WILL THROW SYNTAX ERROR
+  print(player.title())
+  
+  
+Lists can also contain other list values. The values in these lists of lists
+can be accessed using multiple indexes
+
+spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+print(spam[0])
+print(spam[1][2])
+
+==> ['cat', 'bat']
+30
+
+
+
+Copying a List
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:1]     #HERE, WE ARE TELLING THAT THE NEW LIST IS NOT THE COMPLETE LIST, INSTEAD ITS A SUB-LIST UPTO 1ST INDEX (EXCLUDING IT)
+# IF WE NEED TO MAKE THE NEW LIST SAME AS OTHER LIST, WE MUST USE [:]
+
+print("My favorite foods are:")
+print(my_foods)
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
+
+==> My favorite foods are:
+['pizza', 'falafel', 'carrot cake']
+print("\nMy friend's favorite foods are:")
+['pizza']
+
+
+APPEND TO THE LIST
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+THE RESULT OF THIS IS AS BELOW
+My favorite foods are:
+['pizza', 'falafel', 'carrot cake', 'cannoli']
+
+My friend's favorite foods are:
+['pizza', 'ice cream']
+
+
+EXTENDING A LIST
+friend_foods.extend(['choco','ice cream','pickle'])
+print(friend_foods)
+
+HERE, THE VALUES ARE JUST ADDED IN THE SAME ORDER AS IT IS
+==>['choco','ice cream','pickle']
+
+
+pop() # TO REMOVE THE LAST ELEMENT IN THE LIST
+
+my_foods.pop()
+print("final my foods is ")
+print(my_foods)
+
+==> ['pizza', 'falafel', 'carrot cake']
+
+
+REVERSE ORDER IN LIST
+
+my_foods.reverse()
+print("my foods in REVERSE order is ")
+print(my_foods)
+
+==> my foods in REVERSE order is 
+['carrot cake', 'falafel', 'pizza']
+
+
+REMOVING AN ELEMENT IN LIST. HERE, WE NEED TO MENTION THE EXACT ELEMENT OF LIST NAME
+
+my_foods.remove('falafel')
+print("finally my foods is ")
+print(my_foods)
+
+==> finally my foods is 
+['pizza', 'carrot cake', 'cannoli1']
+
+
+DELETE : THIS IS USED TO DELETE WITH AN INDEX NUMBER
+
+del my_foods[1]
+print("finally my foods is ")
+print(my_foods)
+
+
+==> finally my foods is 
+['pizza', 'carrot cake', 'cannoli1']
+
+
+SORTING DATA. THIS IS A PERMANENT CHANGE
+
+my_foods.sort()
+print(my_foods)
+
+==> ['cannoli1', 'carrot cake', 'pizza', 'pizza']
+
+
+
+USING MULTIPLE LISTS
+
+available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
+
+requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
+
+for requested_topping in requested_toppings:
+  if requested_topping in available_toppings:
+    print("Adding " + requested_topping + ".")
+  else:
+    print("Sorry, we don't have " + requested_topping + ".")
+
+print("\nFinished making your pizza!")
+
+
+==> Adding mushrooms.
+Sorry, we don't have french fries.
+Adding extra cheese.
+
+Finished making your pizza!
