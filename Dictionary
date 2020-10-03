@@ -1,0 +1,138 @@
+THERE ARE 2 TYPES OF OBJECTS: MUTABLE AND IMMUTABLE. THESE ARE VERY IMPORANT CONCEPT IN PYTHON.
+UNDERSTANDING THIS CONCEPT IS VERY IMPORTANT AS IT INVOLVES HOW THE DATA CAN BE ALTERED OR NOT. A WRONG WAY OF HANDLING THE DATA CAN MAKE/BREAK THE DATA.
+
+MUTABLE: THINGS CAN BE CHANGED/ALTERED AFTER THEY ARE CREATED. THEY ARE OF TYPES LIST, DICTIONARY, SET
+
+NOTE: TOPICS ON LIST, SET WILL BE COVERED NEXT
+
+BELOW IS AN EXAMPLE OF LIST
+color = ["red", "blue", "green"] 
+print(color)
+
+==> ['red', 'blue', 'green']
+
+TO ACCESS A PARTICULAR INDEX, WE NEED TO CALL AS BELOW
+
+color = ["red", "blue", "green"] 
+print(color[1])
+
+==> blue
+
+IMMUTABLE: THINGS CANNOT BE CHANGED/ALTERED AFTER THEY ARE CREATED.  THEY ARE OF TYPES LIKE INT, FLOAT, BOOL, STRING, TUPLE, ETC
+
+BELOW IS AN EXAMPLE OF TUPLE. HERE, THE DATA VALUES CANNOT BE ALTERED ONCE THEY ARE CREATED
+COORDINATE=(11.222, 23.444)
+
+
+
+DICTIONARY
+CREATED USING CURLY BRACKETS {}
+THEY ARE HETEROGENEOUS
+THEY ARE VARIABLE IN LENGTH
+THEY HAVE A KEY:VALUE PAIR
+FASTER TO ACCESS THE DATA
+NO SLICING
+NO INDEXING
+
+
+>>> author={'fname':'guido','lname':'rossum','mname':'van','location':'Google'}
+>>> print(author)
+
+==> {'fname': 'guido', 'lname': 'rossum', 'mname': 'van', 'location': 'Google'}
+
+TO ACCESS A PARTICULAR KEY, WE NEED TO CALL AS BELOW
+
+print(author['lname'])
+==> rossum
+
+print(author['location'])
+==> Google
+
+author={'fname':'guido','lname':'rossum','mname':'van','location':'Google'}
+print(author['lname'])
+
+if 'age' not in author:
+	author['age']=30
+else:
+	print('already present')
+print(author)
+
+
+==> rossum
+{'fname': 'guido', 'lname': 'rossum', 'mname': 'van', 'location': 'Google', 'age': 30}
+
+author={'fname':'guido','lname':'rossum','mname':'van','location':'Google','age':'30'}
+print(author['lname'])
+
+if 'age' not in author:
+	author['age']=30
+else:
+	print('already present')
+  
+==> rossum
+already present
+
+
+TO PRINT ALL THE KEYS, WE NEED TO USE THE FOR LOOP
+author={'fname':'guido','lname':'rossum','mname':'van','location':'Google','age':'30'}
+
+for mykey in author:
+	print(mykey)
+
+==> fname
+lname
+mname
+location
+age
+
+
+GETTING BOTH THE KEY AND VALUE-PAIRS
+author={'fname':'guido','lname':'rossum','mname':'van','location':'Google','age':'30','test':"test2"}
+for mykey,myval in author.items():print(mykey,myval)
+
+==> fname guido
+lname rossum
+mname van
+location Google
+age 30
+test test2
+
+
+ADDING NEW KEY
+
+author={'fname':'guido','lname':'rossum','mname':'van','location':'Google','age':'30'}
+author['phone']=12323232
+author['country']='Australia'
+print(author)
+
+==> {'fname': 'guido', 'lname': 'rossum', 'mname': 'van', 'location': 'Google', 'age': '30', 'phone': 12323232, 'country': 'Australia'}
+
+HERE, WE HAVE ADDED A NUMERIC DATA AND A STRING DATA
+
+
+TO REMOVE AN ITEM, WE USE THE POP() METHOD. BUT THE RULE IN DICTIONARY IS THAT WE MUST GIVE A KEY NAME
+author={'fname':'guido','lname':'rossum','mname':'van','location':'Google','age':'30'}
+print(author)
+author.pop('location')
+print(author)
+
+==>{'fname': 'guido', 'lname': 'rossum', 'mname': 'van', 'location': 'Google', 'age': '30'}
+{'fname': 'guido', 'lname': 'rossum', 'mname': 'van', 'age': '30'}
+
+THIS WILL REMOVE THE SPECIFIC KEY-VALUE PAIR.
+WE CANNOT USE JUST pop(), AS IT CANNOT DECIDE WHICH ONE TO REMOVE.
+
+IF WE GIVE THE KEY THAT DOESNT EXIST, THEN, IT THROWS AN ERROR THAT THE KEY IS MISSING
+
+
+TO REMOVE THE LAST ITEM OF THE DICTIONARY, WE NEED TO USE popitem(). THIS SHOULD BE USED WITHOUT ANY ARGUEMENT INSIDE THE popitem()
+
+author={'fname':'guido','lname':'rossum','mname':'van','location':'Google','age':'30','test':"test2"}
+print(author)
+author.popitem()
+print(author)
+
+==> {'fname': 'guido', 'lname': 'rossum', 'mname': 'van', 'location': 'Google', 'age': '30', 'test': 'test2'}
+{'fname': 'guido', 'lname': 'rossum', 'mname': 'van', 'location': 'Google', 'age': '30'}
+
+
