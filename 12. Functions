@@ -1,0 +1,166 @@
+If the code is too big, and some part are repetetive, then we must break the code to smaller parts for better handling.
+So, we define one part in one py script and another in another one or define one login in one part and another logic in another part and reuse them later
+
+
+def Greeting(name):
+    print(f'hello {name}')
+    print("Welcome")
+
+Greeting("Ronaldo")
+Greeting("Messi")
+
+
+==> hello Ronaldo
+Welcome
+hello Messi
+Welcome
+
+
+
+Now, let us see how to use the functions in the Mathematical calculations. Here, we are using RETURN to do some actions.
+As we can see below, we are defining a function called SQUARE and we are using an arguement called "num". Then, we are using return function to perform an action,
+by performing mathematical operation, like square of a number
+Then, we will use the print to get the output. In the output, we need to give the value of an arguement, like value for num,
+which needs to be performed the mathematical operation
+
+def square(num):
+    return num * num
+
+
+print(square(3))
+
+==> 9
+
+
+
+Use the input command to get the value from prompt and execute in the function
+
+num=int(input("Enter number to get sq root\n"))
+def square(num):
+    return num*num
+
+print(square(num))
+
+==> Enter number to get sq root
+25
+==> 625
+
+
+
+def conn(name,age,mobile):
+    print(name)
+    print(age)
+    print(mobile)
+
+conn('kumar',30,8899779922)
+
+==>
+kumar
+30
+8899779922
+
+
+def conn(type_server,ipaddr,port):
+	print('Type: ' + type_server)
+	print('IPADDR: ' + ipaddr)
+	print('Port: ' + port)
+
+
+conn('windows','12.3.3.5','62')
+
+==> Type: windows
+IPADDR: 12.3.3.5
+Port: 62
+
+
+
+def conn(type_server,ipaddr,port='8080'):
+
+	print('Typee:' + type_server)
+	print('IPADDR:' + ipaddr)
+	print('Port:' + port)
+
+
+conn('windows','12.3.3.5')
+
+==> Typee:windows
+IPADDR:12.3.3.5
+Port:8080
+
+
+Extraction from list using functions
+
+subj=['pyth','perl','shell']
+def printlist(subj):
+    print(subj)
+
+printlist(subj[1])
+
+==> perl
+
+
+
+def  printone(arg1,*args):
+	print(arg1)
+	print('remaininig arguemetns are', args)
+
+
+printone(100,1,2,'sdsd',099.1,54,5,5,64,52,5)
+
+
+HERE, WE WILL TALK ABOUT LOCAL SCOPE. THE FUNCTION DEFINED HERE IS A LOCAL SCOPE
+
+def printlocal(name):
+    x=100
+    print(name)
+    print(x)
+
+
+printlocal('kumar')
+
+==> kumar
+100
+
+
+def factorial(num):
+    if num<0:
+        return False
+    if num ==0:
+        return 1
+    else:
+        return num*factorial(num-1)	# TO print the output, use print(factorial(10)) in the end 2 lines after this line
+
+
+print(factorial(5))
+
+
+==> 120
+
+
+def factorial(num):
+	"computes factorial of a number"
+	if num<0:
+		return False
+	if num ==0:
+		return 1
+	else:
+		print('*'*num)
+		return num*factorial(num-1)
+
+
+factorial(10)
+
+==>
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+
+
